@@ -20,7 +20,7 @@ public class twitter {
     job.setJarByClass(twitter.class);
     job.setMapperClass(twitterMapper.class);
     job.setReducerClass(twitterReducer.class);
-    //job.setCombinerClass(IntSumReducer.class);
+    job.setCombinerClass(twitterReducer.class);
     job.setMapOutputKeyClass(Text.class);
     job.setMapOutputValueClass(IntWritable.class);
     Path outputPath = new Path(output);
